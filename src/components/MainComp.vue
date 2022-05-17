@@ -1,6 +1,8 @@
 <template>
-<div class="k_container">
-  <AlbumComps />
+<div class="k_container py-5">
+  <AlbumComps 
+  v-for="(album,index) in albums" :key="`album${index}`"
+  :albumItem="album"/>
 
 </div>
   
@@ -41,5 +43,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/style/general';
+@import '../assets/style/vars';
+.k_container{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 </style>

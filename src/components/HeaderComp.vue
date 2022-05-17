@@ -7,9 +7,10 @@
   <div class="input-group k_group">
     <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
       <option selected>Seleziona un genere</option>
-      <option value="1">Pop</option>
-      <option value="2">Hip-Hop</option>
-      <option value="3">Heavy-Metal</option>
+      <option value="1">Rock</option>
+      <option value="2">Jazz</option>
+      <option value="3">Pop</option>
+      <option value="4">Metal</option>
     </select>
   </div>
 
@@ -27,8 +28,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/style/vars';
 @import '../assets/style/general';
+@import '../assets/style/vars.scss';
 
 .my-header{
   display:flex;
