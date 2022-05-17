@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="my-main" >
+
    <HeaderComp />
    <MainComp/>
 
@@ -22,5 +23,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import './assets/style/vars';
+@import './assets/style/general';
+@import './assets/style/utilities';
+@import './assets/style/mixin';
+
+.my-main{
+  background-color: $primary-color;
+  height: 100vh;
+}
 
 </style>
