@@ -5,16 +5,17 @@
   </div>
   
   <div class="input-group k_group">
-    <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-      <option selected>Seleziona un genere</option>
-      <option value="1">Rock</option>
-      <option value="2">Jazz</option>
-      <option value="3">Pop</option>
-      <option value="4">Metal</option>
+    <select class="custom-select" id="inputGroupSelect04"
+    v-model="chooseGenre"
+    @change="$emit('selectGenre', chooseGenre)">
+      <option value="">Seleziona un genere</option>
+      <option value="Rock">Rock</option>
+      <option value="Jazz">Jazz</option>
+      <option value="Pop">Pop</option>
+      <option value="Metal">Metal</option>
     </select>
   </div>
 
-  
 
 </div>
   
@@ -22,8 +23,15 @@
 
 <script>
 export default {
-  name: 'HeaderComp'
-
+  name: 'HeaderComp',
+  props:{
+    albumItem:Object
+  },
+  data(){
+    return{
+      chooseGenre: ''
+    }
+  }
 }
 </script>
 
